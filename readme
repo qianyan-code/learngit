@@ -24,5 +24,7 @@ Git is free software distributed under the GPL.
 				穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本
 				要重返未来，用git reflog 查看命令历史，以便确定要回到未来的哪个版本
 		//	git log可以查看历史提交的commit，显示出来的结果会显得过于啰嗦，
-		  可以使用 git log --pretty=oneline 将改变的的commit用一行输出
+		    可以使用 git log --pretty=oneline 将改变的的commit用一行输出
+		版本回退的步骤：回到过去：如果你想回到前一个版本可以使用git reset --hard HEAD^,回到前两个可以使用git reset --hard HEAD^^,依此类推，回到前一百个版本可以使用git reset HEAD~100
+						回到现在：在你到了过去之后如果使用git log是查看不到现在的版本的，你可以使用git reflog来查看之前版本的commit_id，之后再使用git reset --hard commit_id来回到现在
 */
