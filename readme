@@ -2,14 +2,14 @@
 Git is a version control system.
 Git is free software.
 Git is a distributed version control system.
-Git is free software.
+Git is free software distributed under the GPL.
 
 
 笔记区：
 /*git创建版本库小结：初始化一个Git仓库，使用git init命令
 						添加文件到Git仓库，分两步：
-												1、使用命令git add <file + 属性名> ,注意可以反复多次使用，添加多个文件  
-												2、使用命令git commit -m <备注（自己的改动）>,完成
+												1、使用命令git add file + 属性名 ,注意可以反复多次使用，添加多个文件  
+												2、使用命令git commit -m ”备注（自己的改动）“,完成
 						注意：	//commit -m尖括号中要使用英文双引号，备注可以输入中文
 								//在有的电脑中文件的属性是隐藏的，可以不在file后面可以不加文件的属性，但有的需要
 								//我之前添加失败的原因是git的默认路径是“/C/Users/米咪”，因为我的用户名是中文的，所以导致添加失败
