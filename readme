@@ -3,7 +3,9 @@ Git is a version control system.
 Git is free software.
 Git is a distributed version control system.
 Git is free software distributed under the GPL.
-
+Git is a distributed version control system.
+Git has a mutable index called stage.
+Git tracks changes of files.
 
 笔记区：
 /*git创建版本库小结：初始化一个Git仓库，使用git init命令
@@ -12,7 +14,7 @@ Git is free software distributed under the GPL.
 												2、使用命令git commit -m ”备注（自己的改动）“,完成
 						注意：	//commit -m尖括号中要使用英文双引号，备注可以输入中文
 								//在有的电脑中文件的属性是隐藏的，可以不在file后面可以不加文件的属性，但有的需要
-								//我之前添加失败的原因是git的默认路径是“/C/Users/米咪”，因为我的用户名是中文的，所以导致添加失败
+								//我之前添加失败的原因是git的默	认路径是“/C/Users/米咪”，因为我的用户名是中文的，所以导致添加失败
 */
 
 /*时光穿梭机小结：	要随时掌握工作区的状态，使用git status命令
@@ -25,6 +27,19 @@ Git is free software distributed under the GPL.
 				要重返未来，用git reflog 查看命令历史，以便确定要回到未来的哪个版本
 		//	git log可以查看历史提交的commit，显示出来的结果会显得过于啰嗦，
 		    可以使用 git log --pretty=oneline 将改变的的commit用一行输出
-		版本回退的步骤：回到过去：如果你想回到前一个版本可以使用git reset --hard HEAD^,回到前两个可以使用git reset --hard HEAD^^,依此类推，回到前一百个版本可以使用git reset HEAD~100
-						回到现在：在你到了过去之后如果使用git log是查看不到现在的版本的，你可以使用git reflog来查看之前版本的commit_id，之后再使用git reset --hard commit_id来回到现在
+		版本回退的步骤：回到过去：如果你想回到前一个版可以使用git reset --hard HEAD^,回到前两个可以使用git reset --hard HEAD^^,依此类推，回到前一百个版本可以使用git reset HEAD~100
+			回到现在：在你到了过去之后如果使用git log是查看不到现在的版本的，你可以使用git reflog来查看之前版本的commit_id，之后再使用git reset --hard commit_id来回到现在
+*/ 
+
+/*工作区和暂存区笔记：工作区就是我们在电脑里能看到的目录，比如learngit文件夹就是一个工作区：
+								版本库：工作区有一个隐藏的目录.git，这个不算工作区，而是git的版本库
+								在git的版本库中存了很多东西，其中最重要的就是称为stage的暂存区，还有git为我们自动创建的第一个分支master，以及指向master的一个指针HEAD
+								从这个角度可以将git add理解为把文件修改添加到暂存区
+										git commit实际上就是把暂存区的所有内容都提交到当前分支
+*/
+
+/*管理修改笔记：git比其他版本控制系统设计的更优秀，是因为git跟踪并管理的是修改，而非文件
+		当这样使用时：第一次修改——>git add —>第二次修改 —>git commit 。提交的修改是第一次的，因为git commit只是负责把暂存区的修改提交，也就是第一次的修改被提交了，
+				但第二次的修改不会被提交，因为第二次的修改器并没有放入暂存区中。所以正确的用法应该是
+						第一次修改——> git add ——>第二次修改——> git add ——>git commit
 */
