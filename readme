@@ -87,3 +87,8 @@ Greating a new branch is quick and simple.
 						删除分支：git branch -d name
 				分支有什么用呢？
 */
+
+/*解决冲突笔记：当git无法自动合并时，就必须首先解决冲突，解决冲突后，再提交，合并完成。
+				解决冲突就是把git合并失败的文件手动编辑为我们希望的内容，再提交/
+				使用git log --graph （git log --graph --pretty=oneline --abbrev-commit）命令可以看到分支合并图
+*/
