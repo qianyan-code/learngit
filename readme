@@ -6,7 +6,7 @@ Git is free software distributed under the GPL.
 Git is a distributed version control system.
 Git has a mutable index called stage.
 Git tracks changes of files.
-Greating a new branch is quick.
+Greating a new branch is quick and simple.
 
 笔记区：
 /*git创建版本库小结：初始化一个Git仓库，使用git init命令
