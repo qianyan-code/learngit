@@ -73,3 +73,13 @@ Greating a new branch is quick.
 /*从远程库克隆：要克隆一个仓库，首先必须知道仓库的地址，然后使用git clone git//@github.com:用户名-code/文件名，进行克隆
 				git支持多种协议，包括https，但ssh协议更快。
 */
+
+/*创建与合并分支笔记：git鼓励大量使用分支：
+						查看分支：git branch
+						创建分支：git branch name
+						切换分支：git checkout name 或者 git switch name
+						创建+切换分支：git checkout -b name 或者 git switch -c name
+						合并某分支到当前分支：git merge name
+						删除分支：git branch -d name
+				分支有什么用呢？
+*/
