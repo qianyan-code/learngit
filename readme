@@ -96,3 +96,9 @@ Git tracks changes of files.
 			作者总结：Git十分强大，在团队开发中应该充分利用
 					合并分支时，加上--no-ff参数就可以使用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而Fast forward合并就看不出来曾经做过合并
 */
+
+/*修复bug时，我们会通过创建新的bug分支进行修改，然后合并，最后删除
+			当手头的工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场
+			在master分支上修复的bug，想要合并到当前的dev分支，可以使用git cherry-pick commitname命令，把bug提交的修改”复制“到当前分支，避免重复劳动。
+*/
+				
