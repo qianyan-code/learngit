@@ -100,5 +100,11 @@ Git tracks changes of files.
 /*修复bug时，我们会通过创建新的bug分支进行修改，然后合并，最后删除
 			当手头的工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场
 			在master分支上修复的bug，想要合并到当前的dev分支，可以使用git cherry-pick commitname命令，把bug提交的修改”复制“到当前分支，避免重复劳动。
+			
+			暂停手中的工作去解决另一个工作的方法：git stash(暂停当前工作) git stash apply(恢复暂停的工作) git stash drop(删除暂停工作的记录)
+												git stash list(查看当前暂停工作的记录)	git stash pop(既恢复暂停的工作，又可以删除暂停工作的记录)
+					常用的解决bug的方法：切换到需要修复bug的分支，在这个分支上创建另一个分支，切换到另一个分支上修复bug，修复完之后，add commit
+										再切换到要修复bug的分支上，之后再使用git merge --no-ff -m合并，再删除创建的分支切换到暂停工作的分支
+										使用相关命令修复即可。
 */
 				
