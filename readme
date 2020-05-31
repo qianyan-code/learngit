@@ -107,4 +107,9 @@ Git tracks changes of files.
 										再切换到要修复bug的分支上，之后再使用git merge --no-ff -m合并，再删除创建的分支切换到暂停工作的分支
 										使用相关命令修复即可。
 */
+
+/*Feature分支：开发一个新的feature，最好新建一个分支：
+												如果要丢弃一个没有被合并过的分支，可以通过git branch -D 分支名称 强行删除
+*/
+
 				
