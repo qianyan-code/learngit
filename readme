@@ -110,6 +110,9 @@ Git tracks changes of files.
 
 /*Feature分支：开发一个新的feature，最好新建一个分支：
 												如果要丢弃一个没有被合并过的分支，可以通过git branch -D 分支名称 强行删除
+												
+				Feature分支常用来开发一个程序的新的功能，当你在feature分支的开发完成之后，可以切换到主分支，使用merge进行合并，如果你不想要这个
+			分支开发的功能可以使用git branch -D 分支名称 进行强制删除（在你没有merge的时候，删除分支的方法）
 */
 
 				
